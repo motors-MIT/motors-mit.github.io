@@ -8,8 +8,8 @@ featured_image: /images/social.jpg
 <div class="page-blog">
 	<header class="header--single">
 		<div class="wrap">
-			<h1 class="header__title">Blog</h1>
-			<p class="header__subtitle subtitle--light">Find out what I've been up through my latest photo blogging adventures.</p>
+			<h1 class="header__title">Featured Projects</h1>
+			<p class="header__subtitle subtitle--light">Projects from MITERS, MIT EVT, the Motors Class, and more.</p>
 		</div>
 	</header>
 
@@ -51,11 +51,11 @@ featured_image: /images/social.jpg
 		<div class="wrap">
 			{% if paginator.previous_page %}
 			<a href="{{ paginator.previous_page_path | relative_url }}"
-				class="button--text--accent --left pagination__prev">Newer Posts</a>
+				class="button--text--accent --left pagination__prev">Newer Projects</a>
 			{% endif %}
 			{% if paginator.next_page %}
 			<a href="{{ paginator.next_page_path | relative_url }}"
-				class="button--text--accent --right pagination__next">Older Posts</a>
+				class="button--text--accent --right pagination__next">Past Projects</a>
 			{% endif %}
 		</div>
 	</section>
