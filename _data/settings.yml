@@ -8,10 +8,14 @@ header_settings:
 
 menu_settings:
   menu_items:
-    - title: 'Projects'
+    - title: 'Hardware Design Center'
       url: '/'
-    - title: 'Blog'
+    - title: 'Motors Knowledge Center'
+      url: '/'
+    - title: 'Projects and Research'
       url: '/blog/'
+    - title: 'Electric Vehicle Team'
+      url: 'https://evt.mit.edu'
 
 footer_settings:
   logo_image: 
