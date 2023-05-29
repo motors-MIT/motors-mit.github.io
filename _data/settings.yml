@@ -1,10 +1,10 @@
 basic_settings:
-  site_title: Made
+  site_title: MIT Motor Lab
   favicon_image: /images/favicon.png
 
 header_settings:
-  logo_image: 
-  logo_width: 100
+  logo_image: /images/logo.png
+  logo_width: 200
 
 menu_settings:
   menu_items:
@@ -16,10 +16,10 @@ menu_settings:
 footer_settings:
   logo_image: 
   logo_width: 100
-  tagline: A beautiful, minimal portfolio Jekyll theme
+  tagline: An open-source resource for motor design and control.
 
 hero_settings:
-  background_image: /images/backgrounds/background-hero.svg
+  background_image: 
 
 post_settings:
   grid_spacing: 10
