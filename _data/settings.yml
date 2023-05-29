@@ -9,11 +9,11 @@ header_settings:
 menu_settings:
   menu_items:
     - title: 'Motor Knowledge Center'
-      url: '/motors/'
+      url: '/motors'
     - title: 'Equipment /Lab Resources'
-      url: '/resources/'
+      url: '/resources'
     - title: 'Open Source Hardware'
-      url: '/docs/'
+      url: '/docs'
     - title: 'Student Projects /Research'
       url: '/blog/'
 
