@@ -15,7 +15,7 @@ featured_image: /images/social.jpg
 
 [List of Recommended Software](/software)
 
-[List of Recommended Resources]()
+[List of Recommended Resources](/links)
 
 ## Brushed DC Motors Selection + Control
 

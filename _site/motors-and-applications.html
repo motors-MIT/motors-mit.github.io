@@ -216,12 +216,16 @@
   <p>A motor is an electro-mechanical transducer, it converts electrical energy into mechanical energy, and therefor is also capable of converting mechanical energy into electrical energy. It’s magical of course, but we can explain that magic with physics. That’s what we’ll do here.</p>
 </blockquote>
 
-<p>We promised our focus would be to be practical. So let’s take a look at the <a href="https://sdgs.un.org/goals">United Nations Sustinable Development Goals (SDGs)</a>. Goal 7 is about <strong>Affordable Clean Energy,</strong> Goal 9 is about <strong>Industry, Innovation, and Infrastructure,</strong> Goal 12 and 13 relate to <strong>Responsible Consumption and Production, and Climate Action,</strong> all of these and more relate to motors. Motors are required to generate power, they will be vital to the transition to clean energy, so studying their design to develop more efficient machines is critical to the future. Understanding them, can help us understand different ways to build a better world. We’ll focus a lot on motor’s applications to the UN SDGs in this notebook by describing specific project.</p>
+<p>We promised our focus would be to be practical. So let’s take a look at the <a href="https://sdgs.un.org/goals">United Nations Sustinable Development Goals (SDGs)</a>. Goal 7 is about <strong>Affordable Clean Energy,</strong> Goal 9 is about <strong>Industry, Innovation, and Infrastructure,</strong> Goal 12 and 13 relate to <strong>Responsible Consumption and Production, and Climate Action,</strong> all of these and more relate to motors. Motors are required to generate power, they will be vital to the transition to clean energy, so studying their design to develop more efficient machines is critical to the future. Understanding them, can help us understand different ways to build a better world. We’ll focus a lot on motor’s applications to the UN SDGs in this notebook by describing specific projects.</p>
 
 <figure>
 <img src="/images/social.jpg" alt="Trulli" style="width:100%" />
 <figcaption align="center"><b>Fig.1 - This is the power unit from the first version of the MIT EVT's hydrogen motorcycle, it uses (2x) electric motors to drive the main output shaft.</b></figcaption>
 </figure>
+
+<p><br /></p>
+
+<p>Motors are all around us, and not only is studying them both useful and practical, but incredibly interesting because of the complexity of the system. Designing motors requires and understanding of electromagnetics, but also materials science, and mechanical design—that too at a very detailed level. Designing of motor control requires an understanding of controls of course, but also sensing, electrical design, power systems, discrete-time microcontroller programming, and signal processing. Motors and motor control span so many aspects of sicence an engineering that learning about it allows an engineering to become well-versed in many skills at the same time while also remaining incredibly focused on the design of a single system. It’s very unique in that way. That why more people should study motors, but we’re pretty biased.</p>
 
 <h3 id="a-technical-overview">A Technical Overview</h3>
 
@@ -234,10 +238,20 @@
 
 <p><br /></p>
 
-<p>There are <em>many kinds</em> of electric motors these days. And this is by nature of the number of applications for these systems. There are many systems that use motors, many have different requirements, and this results in many different types of motors as each type is optimized for different things.</p>
+<p>The book starts by describing just how many types of motors exist. And there are <em>many kinds</em> of electric motors these days. This is by nature of the number of applications for these systems. There are many systems that use motors, many have different requirements, and this results in many different types of motors as each type is optimized for different things.</p>
 
-<div class="gallery full-width" data-columns="1"><img src="robot.jpg" /><img src="lathe.jpeg" /><img src="bike.jpeg" /><img src="kart.jpeg
+<p>Motors can be powered by <a href="https://www.youtube.com/watch?v=Wm75XgbqHBY">AC power, or DC power</a>. Some motors can be directly run, others require a motor controller to control them. All of this depends on their design. The most common motors are induction motors, the cheapest motors are brushed ones. We’ll go into detail in both brushed and brushless systems and describe their design and their control. Know there are more types, and after you master these types, understanding the rest will be easier.</p>
+
+<p>In this notebook, we will <strong>focus on the design and analysis of DC motor control systems both brushed and brushless.</strong> AC systems will not be considered for now, but we might add them later. Honestly, we don’t know much about them.</p>
+
+<h3 id="applications">Applications</h3>
+
+<p>The following includes some example applications of motors pulled from things we have worked on previously. But there are many more, and we’ll spread examples out over the entire learning process <strong>and include many examples that relate directly to the UN SDGs.</strong></p>
+
+<div class="gallery full-width" data-columns="1"><img src="robot.JPG" /><img src="lathe.jpeg" /><img src="bike.jpeg" /><img src="kart.jpeg
 	" /></div>
+
+<p>The slideshow above contains just a few ones to start with.</p>
 
 <ol>
   <li>The <a href="https://news.mit.edu/2018/blind-cheetah-robot-climb-stairs-obstacles-disaster-zones-0705">MIT Cheetah 3 Robot</a> uses <a href="https://fab.cba.mit.edu/classes/865.18/motion/papers/mit-cheetah-actuator.pdf">brushless motors as actuators</a> to run, and jump.</li>
@@ -246,19 +260,79 @@
   <li>This go-kart uses an electric motor to drive around, and also charges its batteries when slowing down using <a href="https://auto.howstuffworks.com/auto-parts/brakes/brake-types/regenerative-braking.htm">regenerative braking</a>, we’ll learn more about this kart later in the notebook!</li>
 </ol>
 
-<p>Other systems such as Nuclear Power Plans, Hydro-electric Dams, and more use motors to generate power as well. Generally, the process of power generation uses <em>something</em> to turn a big turbine, and this turbine turns a motor which generates electric power. We’ll study that power generation process as well.</p>
+<p>Other systems such as Nuclear Power Plants, Hydro-electric Dams, and more use motors to generate power as well. Generally, the process of power generation uses <em>something</em> to <a href="https://www.youtube.com/watch?v=20Vb6hlLQSg">turn a big turbine</a>, and this turbine turns a motor which generates electric power. We’ll study that power generation process as well.</p>
 
 <h3 id="magnets-and-materials">Magnets and Materials</h3>
 
 <p>Motors work on the principals of electro-magnetics. So the physics that make them work, and the limitations associated with those physics come from understanding magnetics. Here are two great intro videos. We’re talking about special relativity, materials, and so much more. We’ll cover a lot of this but initial understanding is super helpful.</p>
 
-<div class="video-wrap full-width">
-  <iframe src="https://www.youtube.com/watch?v=hFAOXdXZ5TM" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-</div>
+<p><em>We apologize for the links while we get video embedding to work… HTML is hard OK.</em></p>
 
-<div class="video-wrap full-width">
-  <iframe src="https://www.youtube.com/watch?v=1TKSfAkWWN0" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-</div>
+<ol>
+  <li><a href="https://www.youtube.com/watch?v=hFAOXdXZ5TM">Magnets, How do they Work?</a></li>
+  <li><a href="https://www.youtube.com/watch?v=1TKSfAkWWN0">Special Relativity, Magnets, Electricity</a></li>
+</ol>
+
+<h3 id="helpful-content-going-in">Helpful Content Going In</h3>
+
+<p>Like we described in the concept map, we’re going to have to assume some amount of knowledge. Otherwise this website would take up the rest of the internet. But we’ll try not to assume a lot, and we’ll try to link resources that will help you learn the basics. Here’s a link to a bunch of stuff that will help along the way, a lot is repeated in the resources page. We’ll try to tell you when we’re assuming knowledge, we will try not to assume too much.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Physics E&amp;M at the high-school level</td>
+      <td><a href="https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/">Intro E&amp;M</a></td>
+      <td><a href="https://www.thriftbooks.com/w/thinking-physics-understandable-practical-reality_lewis-carroll-epstein/250662/item/11836090/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=pmax_new_books&amp;utm_adgroup=&amp;utm_term=&amp;utm_content=&amp;gclid=EAIaIQobChMIpOLcpPeYgAMVQ_DjBx0B2AkZEAQYASABEgLNFfD_BwE#idiq=11836090&amp;edition=2984862">a good physics book</a></td>
+      <td><a href="https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/">Circuit Analysis</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Soldering, Wiring, and other Lab Skills</td>
+      <td><a href="https://pcb.mit.edu/lectures/lab_05/">MIT PCB Design Population/Debugging</a></td>
+      <td><a href="https://pcb.mit.edu/lectures/lab_03/">Basic Soldering</a></td>
+      <td><a href="https://pcb.mit.edu/lectures/lecture_05/">Multimeter /Scope /Debugging</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="for-higher-level-stuff-like-motor-controller-design">For Higher-Level Stuff like Motor Controller Design</h5>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Power Electronics / Circuit Design Course</td>
+      <td><a href="https://www.edx.org/course/circuits-and-electronics-1-basic-circuit-analysi-2?irclickid=SV7Tbk2nFxyPUdOTffz%3AQSDvUkFzbKwMmxd9xs0&amp;utm_source=affiliate&amp;utm_medium=Class%20Central&amp;utm_campaign=Harvard%27s%20Computer%20Science%20for%20Python%20Programming_&amp;utm_content=TEXT_LINK&amp;irgwc=1">Intro Electronics</a></td>
+      <td><a href="http://instrumentacion.qi.fcen.uba.ar/libro/Scherz.pdf">Practical Electronics for Inventors</a></td>
+      <td><a href="https://ocw.mit.edu/courses/6-334-power-electronics-spring-2007/">Power Electronics</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>PCB Design</td>
+      <td><a href="https://pcb.mit.edu">The Art + Science of PCB Design</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>ST Microcontroller Programming (STM32)</td>
+      <td><a href="https://www.st.com/content/st_com/en/support/learning/stm32-education.html">Link to their online knowledge base</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Most of the other stuff, we will cover. <strong>We’ll come out and tell you now that basic circuits and E&amp;M we won’t cover on this site. Everything else, even the advanced resources we linked will be covered in some form.</strong> The resources page will have more links to things that you can use to learn, but we reccomend an understanding of E&amp;M going into this notebook.</p>
+
+<p><strong>Ready? Yea? Let’s get started!</strong></p>
 
 			</article>
 
