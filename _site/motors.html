@@ -28,13 +28,13 @@
 	<meta name="twitter:title"
 		content="Motors – MIT Motor Lab">
 	<meta name="twitter:description" content="An open-source knowledge center on motor design, control, and testing for electric vehicles and robotics.">
-	<meta name="twitter:image:src" content="http://localhost:4000/images/social.jpg">
+	<meta name="twitter:image:src" content="/images/social.jpg">
 
 	<!-- Facebook OpenGraph -->
 	<meta property="og:title"
 		content="Motors – MIT Motor Lab" />
 	<meta property="og:description" content="An open-source knowledge center on motor design, control, and testing for electric vehicles and robotics." />
-	<meta property="og:image" content="http://localhost:4000/images/social.jpg" />
+	<meta property="og:image" content="/images/social.jpg" />
 
 	
 	<!-- Font Embed Code -->
@@ -74,7 +74,7 @@
 
 
 <body class="loading ajax-loading"
-	data-site-url="http://localhost:4000" data-page-url="/motors">
+	data-site-url="" data-page-url="/motors">
 
 
 	<header class="header--main">
@@ -210,18 +210,75 @@
 			<article class="post__content ">
 				<h2 id="the-basics">The Basics</h2>
 
-<p><a href="/intro">Introduction to Motors, and their Applications</a></p>
-<ul>
-  <li>Types of Motors, and Motor Selection</li>
-  <li>List of Good Pre-Requisite Resources</li>
-</ul>
+<p><a href="/resources/motor_concept_map.pdf">A ‘Learning Map’ for Motors</a></p>
+
+<p><a href="/intro">Introduction to this Notebook</a></p>
+
+<p><a href="/motors-and-applications">Introduction to Motors, and their Applications</a></p>
+
+<p><a href="/software">List of Recommended Software</a></p>
+
+<p><a href="">List of Recommended Resources</a></p>
 
 <h2 id="brushed-dc-motors-selection--control">Brushed DC Motors Selection + Control</h2>
 
+<h3 id="fundementals-of-dc-brushed-motors--control">Fundementals of DC Brushed Motors + Control</h3>
+
+<p><a href="">Brushed DC Motors—an Overview</a></p>
 <ul>
   <li>Brushed Motor Physics Equation Derived, Torque Speed Curve, Etc</li>
+  <li>https://www.youtube.com/watch?v=CWulQ1ZSE3c</li>
+  <li>https://www.youtube.com/watch?v=pxtRlKs0pAg</li>
+</ul>
+
+<p><a href="">Pulse-Width-Modulation + its Applications to Motor Control, the H-Bridge</a></p>
+
+<p><a href="">Current (Torque) Control of a Brushed DC Motor</a></p>
+<ul>
   <li>Start w/ a simple DC motor that can do current control (NO GATE DRIVE CHIP, just use an H-bridge controller and current sensor, modular)</li>
-  <li>Go into types of control, PWM, speed control, position control, then current control</li>
+</ul>
+
+<p><a href="">Drive Control Bandwith Analysis</a></p>
+<ul>
+  <li>How do you know if your motor drive and system is “good enough” for your application</li>
+</ul>
+
+<h3 id="designing-commercial-off-the-shelf-brushed-motor-systems-cots--integrate-this-with-brushless-cots-systems-as-well">Designing Commercial-Off-the-Shelf Brushed Motor Systems (COTS) –&gt; INTEGRATE THIS WITH BRUSHLESS COTS SYSTEMS AS WELL!!!</h3>
+
+<p><strong>Like just “designing COTS motor systems”</strong></p>
+
+<p><a href="">Selecting a Brushed Motor for an Application</a></p>
+<ul>
+  <li>gear ratios, torque speed curves, etc</li>
+</ul>
+
+<p><a href="">Selecting a Motor Controller for an Application + Interfacing With It</a></p>
+<ul>
+  <li>when should you NOT design a motor controller, when can you use something else for a motor controller</li>
+</ul>
+
+<p><a href="">Encoders + Encoder Selection</a></p>
+
+<p><a href="">Using Power Converters as Motor Controllers (The Prius Power Stage Case Study)</a></p>
+
+<p><a href="">Power Analysis, Programming Power Curves (Go-Kart Throttle Response Case Study)</a></p>
+
+<h3 id="building-your-own-motor-controller">Building your Own Motor Controller</h3>
+
+<p><a href="">Design of Brushed Motor Controllers</a></p>
+
+<ul>
+  <li>general layout</li>
+  <li>fet selection</li>
+  <li>current sensing</li>
+  <li>power stage and protection</li>
+  <li>regenerative braking… etc etc</li>
+  <li>inputs / outputs</li>
+</ul>
+
+<p><a href="">Sensing Precision, PWM Switching Frequency, and Effects on Control</a></p>
+
+<ul>
   <li>Design of Brushed Motor Inverters (fet selection, current sensing, PWM clock speeds)</li>
   <li>Regenerative Braking in Brushed Systems (without a gate drive chip)</li>
   <li>Introduction to Gate Drive Chips + Why you might want to Use them</li>
@@ -230,7 +287,7 @@
 <h2 id="brushless-dc-motors-selection--control">Brushless DC Motors Selection + Control</h2>
 
 <ul>
-  <li>Brushless DC Motors overview, three-phase</li>
+  <li>Brushless DC Motors overview, three-phase, PEAK POWER POINT AND SATURATION (T/S curves)</li>
   <li>Simple forms of brushless motor control</li>
   <li>Field-Oriented Control + Theory, torque control of three-phase motors (using a small BLDC and something like an O-Drive)</li>
   <li>SVM (space-vector modulation)</li>
@@ -243,13 +300,17 @@
 <h2 id="higher-level-forms-of-control">Higher Level Forms of Control!</h2>
 
 <ul>
+  <li>Speed Control, Position Control</li>
   <li>Impedance Control! (fun applications)</li>
   <li>Field Weakening Control for BLDC motors</li>
+  <li>Stat Machines in Motor Control + Triggering Switches</li>
 </ul>
 
 <h2 id="power-generation">Power Generation</h2>
 
 <h2 id="motor-design--testing">Motor Design + Testing</h2>
+
+<p><a href="/motor_design_1">Introduction to Motor Design</a></p>
 
 <ul>
   <li>Poles Slots</li>
@@ -257,9 +318,35 @@
   <li>Bearing selection + design</li>
   <li>Ansys Motor CAD</li>
   <li>Dyno systems</li>
+  <li>efficiency maps, power maps</li>
 </ul>
 
+<p>Check out: https://keysan.me/ee564/ (for motor design)</p>
+
 <p><strong>BORROW THINGS FROM 2.74 BUT RE-WRITE MOST OF IT!!!</strong></p>
+
+<p><strong>WHY DO WE NOT NEED REGEN PROTECTION FOR A DYNO WITH TWO MOTORS??</strong></p>
+
+<p><strong>HOW TO ESIMATE TORQUE SPEED CURVE FROM MAGNETIC SATURATION, PEAK POWER POINT, FREE SPEED b/c PPP =/ the Knee</strong></p>
+
+<p><strong>DON’t RE-WRITE THINGS THAt DON’T NEED RE-WRITING THE SAME WAY WE DID THE PCB CLASS</strong></p>
+
+<p><strong>We will see, but all tutorials might be in STMCubeIDE not MBED and we’ll explain why (optimization of code)</strong></p>
+
+<h1 id="other-resources">other resources</h1>
+
+<p>https://rlib.redarm.in/post/winding-pattern/</p>
+
+<p>https://www.electrical4u.com/armature-winding-pole-pitch-coil-span-commutator-pitch/</p>
+
+<p>maybe this too? https://www.tutorialspoint.com/pitch-factor-or-coil-span-factor-in-alternator#:~:text=The%20coil%20span%2Dfactor%20or,also%20known%20as%20chording%20factor.</p>
+
+<p>great video: https://www.youtube.com/watch?v=rTsRSTzeqaM</p>
+
+<p>also good: https://www.youtube.com/watch?v=Tq5O7ma-xno</p>
+
+<p>http://www.davidsonsales.com/public/pdfs/CoilPitch.pdf</p>
+
 
 			</article>
 

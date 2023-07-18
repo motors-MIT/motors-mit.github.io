@@ -5,4 +5,12 @@ description: An open-source knowledge center on motor design, control, and testi
 featured_image: /images/social.jpg
 ---
 
-Please note, this contact form is for demo purposes only and is not monitored. Please contact us [via our website](https://jekyllthemes.io) if you need support.
+Please note that some of the below projects are *not mantained by us, rather are links to incredibly useful open-source projects developed by individuals on the inter-webs!*
+
+### Motor Control
+
+[Ben Katz's Mini Cheetah Motor Driver]()
+
+[ODrive V3.1 Motor Controller]()
+
+[VESC Skateboard + Personal Vehicle Motor Controller]()
